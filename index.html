@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+            box-sizing: border-box;
+        }
+        input[type="email"]:invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="sendData.php" method="post">
+    <fieldset>
+        <legend>Information</legend>
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Your lastname" required><br><br>
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Your firstname" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" id="email" name="email" placeholder="Email" required><br><br>
+
+        <label for="date">Date of birth</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <p>What's your group?</p>
+        <label for="gr1">Group 1</label>
+        <input type="radio" id="gr1" name="group-value" value="Gr1">
+        <label for="gr2">Group 2</label>
+        <input type="radio" id="gr2" name="group-value" value="Gr2"><br><br>
+
+        <p>Web development skills?</p>
+        <label for="checkbox1">HTML</label>
+        <input type="checkbox" id="checkbox1" name="HTML" value="HTML">
+        <label for="checkbox2">CSS</label>
+        <input type="checkbox" id="checkbox2" name="CSS" value="CSS">
+        <label for="checkbox3">JavaScript</label>
+        <input type="checkbox" id="checkbox3" name="JS" value="JS"><br><br>
+
+        <label for="speciality">Choose your speciality:</label>
+        <select name="speciality" id="speciality">
+            <option value="">--Choose--</option>
+            <option value="CS">Computer Science</option>
+            <option value="CE">Chemical Engineering</option>
+            <option value="PE">Petroleum Engineering</option>
+            <option value="GE">Geophysical Engineering</option>
+        </select>
+        <br><br>
+
+        <label for="code">Write HTML or CSS code</label><br>
+        <textarea id="code" name="css/html" rows="5" cols="33"></textarea><br><br>
+
+        <button>Submit</button>
+    </fieldset>
+</form>
+</body>
+</html>
